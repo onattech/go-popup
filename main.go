@@ -1,11 +1,17 @@
 package main
 
-import "log"
+import (
+	"log"
 
-func init(){
-log.SetFlags(log.Ltime | log.Lshortfile)
+	"github.com/tawesoft/golib/v2/dialog"
+)
+
+func init() {
+	log.SetFlags(log.Ltime | log.Lshortfile)
 }
 
 func main() {
- log.Println("Hi")
+	log.Println("Hi")
+	ok := dialog.Info("HI")
+	log.Printf("ok: %v\n", ok)
 }
